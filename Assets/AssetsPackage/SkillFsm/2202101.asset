@@ -1,0 +1,1275 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 2202101
+  m_EditorClassIdentifier: 
+  category: General
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 11400000}
+    name: FSM
+    startState: Init
+    states:
+    - name: Idle
+      description: "\u7B49\u5F85\u6280\u80FD\u89E6\u53D1\u6307\u4EE4"
+      colorIndex: 0
+      position:
+        x: 54
+        y: 233.5
+        width: 129
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: OnChargeStart
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: ChargeStop 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: []
+        actionIsOpen: []
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: []
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: StopSkill
+      description: "\u901A\u77E5\u903B\u8F91\u5C42\u6280\u80FD\u7ED3\u675F"
+      colorIndex: 0
+      position:
+        x: 61.546875
+        y: 390.78125
+        width: 117.5
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Idle
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - KIIF.PlayMaker.RemoveBuff
+        - KIIF.PlayMaker.RemoveBuff
+        - KIIF.PlayMaker.StopSfx
+        - KIIF.PlayMaker.StopSkill
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: "\x01\x01\x01\x01"
+        actionIsOpen: "\x01\x01\x01\x01"
+        actionStartIndex: 00000000020000000400000008000000
+        actionHashCodes: 908c9404908c94044fb39601908c9404
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 20298
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 20499
+        - useVariable: 1
+          name: effect
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2202101
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 10000000180000001000000018000000100000000100000001000000180000001000000018000000
+        paramName:
+        - buffID
+        - ownerPawn
+        - buffID
+        - ownerPawn
+        - sfxInstID
+        - isParentDestroied
+        - isDestroyImmediately
+        - ownerPawn
+        - SkillId
+        - ownerPawn
+        paramDataPos: 00000000000000000100000001000000020000000000000001000000020000000300000003000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000001000000000000000000000000000000
+    - name: StartSkillMode
+      description: 
+      colorIndex: 0
+      position:
+        x: 672.3828
+        y: 243.26562
+        width: 127
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: BeforeTime
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - KIIF.PlayMaker.AddBuff
+        - KIIF.PlayMaker.AddBuff
+        - KIIF.PlayMaker.AnimatorCrossFade
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: "\x01\x01\x01"
+        actionIsOpen: "\x01\x01\x01"
+        actionStartIndex: 000000000300000006000000
+        actionHashCodes: 76cc0c0176cc0c01c0b92005
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Base Layer.22025SkillA
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 20499
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 20298
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: "\x01\x01"
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000000100000018000000100000000100000018000000120000000f000000100000000f00000018000000
+        paramName:
+        - buffID
+        - isRemoveOnSkillInterrupted
+        - ownerPawn
+        - buffID
+        - isRemoveOnSkillInterrupted
+        - ownerPawn
+        - stateName
+        - transitionDuration
+        - layer
+        - normalizedTime
+        - ownerPawn
+        paramDataPos: 0000000000000000000000000100000001000000010000000000000000000000020000000100000002000000
+        paramByteDataSize: 0000000001000000000000000000000001000000000000000000000000000000000000000000000000000000
+    - name: Init
+      description: "\u521D\u59CB\u5316\u6570\u636E"
+      colorIndex: 0
+      position:
+        x: 55
+        y: 106.99219
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Idle
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetOwner
+        - KIIF.PlayMaker.GetModelGo
+        customNames:
+        - 
+        - 
+        actionEnabled: "\x01\x01"
+        actionIsOpen: "\x01\x01"
+        actionStartIndex: 0000000001000000
+        actionHashCodes: 5c0045053b7aa204
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: owner
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: model
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: []
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 130000001300000018000000
+        paramName:
+        - storeGameObject
+        - storeGameObject
+        - ownerPawn
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000000000000
+    - name: CreateDamage
+      description: "\u521B\u5EFA\u4F24\u5BB3"
+      colorIndex: 0
+      position:
+        x: 440.32812
+        y: 377.41406
+        width: 128
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: AfterTime
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - KIIF.PlayMaker.GetOwnerForward
+        - KIIF.PlayMaker.GetOwnerPosition
+        - KIIF.PlayMaker.CreateHitById
+        - KIIF.PlayMaker.CreateSfx
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: "\x01\x01\x01\x01\x01"
+        actionIsOpen: "\x01\x01\x01\x01\x01"
+        actionStartIndex: 0000000002000000040000000f00000018000000
+        actionHashCodes: c6783403c678340302e027039d5a990348c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: own
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.15
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2202501
+        - useVariable: 1
+          name: hit
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2202501
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: forward
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: position
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: position
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: forward
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1c000000180000001c000000180000001000000012000000020000001c0000001c0000000f00000011000000100000000f00000001000000180000001000000010000000120000001c0000001c000000010000000100000001000000180000000f0000001700000001000000
+        paramName:
+        - storeForward
+        - ownerPawn
+        - storePosition
+        - ownerPawn
+        - id
+        - boneName
+        - beforeTime
+        - position
+        - forward
+        - coef
+        - onBone
+        - hitObjectHashCode
+        - moveSpeed
+        - isRemoveOnSkillInterrupted
+        - ownerPawn
+        - sfxTID
+        - storeSfxID
+        - boneName
+        - localPosition
+        - localRotation
+        - isFixedRotation
+        - isFitAttackSpeed
+        - isRemoveOnSkillInterrupted
+        - ownerPawn
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000001000000010000000000000000000000000000000200000003000000000000000000000001000000010000000400000002000000020000000300000001000000040000000500000005000000060000000700000003000000020000000000000008000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000010000000100000000000000000000000000000001000000
+    - name: BeforeTime
+      description: 
+      colorIndex: 0
+      position:
+        x: 686.28906
+        y: 369.58594
+        width: 106
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: CreateDamage
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: "\x01"
+        actionIsOpen: "\x01"
+        actionStartIndex: 00000000
+        actionHashCodes: 48c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.35
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0f0000001700000001000000
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 000000000000000000000000
+        paramByteDataSize: 000000000000000001000000
+    - name: AfterTime
+      description: 
+      colorIndex: 0
+      position:
+        x: 254.21094
+        y: 395.3828
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: StopSkill
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - KIIF.PlayMaker.RemoveHit
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        actionEnabled: "\x01\x01"
+        actionIsOpen: "\x01\x01"
+        actionStartIndex: 0000000002000000
+        actionHashCodes: 908c940448c01101
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.3
+        fsmIntParams:
+        - useVariable: 1
+          name: hit
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 10000000180000000f0000001700000001000000
+        paramName:
+        - hitObjectHashCode
+        - ownerPawn
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000000000000000000000000000000000000
+        paramByteDataSize: 0000000000000000000000000000000001000000
+    - name: ChargeStop 2
+      description: 
+      colorIndex: 0
+      position:
+        x: 218.5
+        y: 231
+        width: 120
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: State 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - KIIF.PlayMaker.GetCloestPawnDir
+        customNames:
+        - 
+        actionEnabled: "\x01"
+        actionIsOpen: "\x01"
+        actionStartIndex: 00000000
+        actionHashCodes: 64409401
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          enumName: ECampRelationship
+          intValue: 6
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 10
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 180
+        fsmIntParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 33280
+        fsmBoolParams:
+        - useVariable: 1
+          name: isCloestPosExist
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: cloestPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: cloestPawnDir
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: []
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 110000001c0000001c0000002a000000100000000f0000000f00000018000000
+        paramName:
+        - isCloestPosExist
+        - storePos
+        - storeDir
+        - targetCampRelationship
+        - raycastLayer
+        - detectedRange
+        - halfFieldOfView
+        - ownerPawn
+        paramDataPos: 0000000000000000010000000000000000000000000000000100000000000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
+    - name: State 3
+      description: 
+      colorIndex: 0
+      position:
+        x: 383.6328
+        y: 203.32031
+        width: 150
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: CloestPosExist
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Exist
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: CloestPosNotExist
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: StartSkillMode
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: "\x01"
+        actionIsOpen: "\x01"
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: isCloestPosExist
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - CloestPosExist
+        - CloestPosNotExist
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Exist
+      description: 
+      colorIndex: 0
+      position:
+        x: 646.78125
+        y: 147.75
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: StartSkillMode
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - KIIF.PlayMaker.ModifyCameraOffsetVec
+        - KIIF.PlayMaker.FaceToDir_Camera
+        - KIIF.PlayMaker.FaceToDirImmediately
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: "\x01\x01\x01"
+        actionIsOpen: "\x01\x01\x01"
+        actionStartIndex: 000000000400000008000000
+        actionHashCodes: 1fafb504a3d97400c6783403
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ownerPawn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: PartMarker
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: cloestPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: cloestPawnDir
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: cloestPos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: cloestPawnDir
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Camera.OffsetVecLeaveTest
+        - Camera.OffsetVecBackTest
+        - Camera.AttackMove
+        byteData: []
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1c0000000300000003000000180000001c0000001c00000003000000180000001c00000018000000
+        paramName:
+        - aimedPos
+        - leaveCurveName
+        - backCurveName
+        - ownerPawn
+        - dir
+        - cloestPos
+        - curveName
+        - ownerPawn
+        - dir
+        - ownerPawn
+        paramDataPos: 00000000000000000100000000000000010000000200000002000000010000000300000002000000
+        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: OnChargeInterrupt
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: OnChargeStop
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: OnSkillStop
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SKILLBREAK
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: SLOWDOWN
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: StartSkillMode
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables:
+      - useVariable: 1
+        name: effect
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: hit
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      boolVariables:
+      - useVariable: 1
+        name: isCloestPosExist
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables:
+      - useVariable: 1
+        name: cloestPawnDir
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: cloestPos
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: forward
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      - useVariable: 1
+        name: position
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: model
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: owner
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables:
+      - useVariable: 1
+        name: ownerPawn
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: PartMarker
+        value: {fileID: 0}
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    description: "\u77ED\u6682\u524D\u6447\u540E\u5411\u524D\u6A2A\u626B\u4E00\u5200\uFF0C\u9020\u6210\u524D\u65B9\u6247\u5F62\u8303\u56F4\u5DE8\u5927\u4F24\u5BB3"
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 1
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
